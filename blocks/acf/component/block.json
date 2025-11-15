@@ -1,0 +1,20 @@
+{
+    "name": "nds/component",
+    "title": "Component",
+    "description": "A custom component block with various styles and options.",
+    "style": [ "file:./style.css" ],
+    "category": "nds-blocks",
+    "icon": "button",
+    "keywords": ["component"],
+    "acf": {
+        "blockVersion": 3,
+        "mode": "preview",
+        "renderTemplate": "component.php"
+    },
+    "supports": {
+        "anchor": true,
+        "spacing": {
+            "margin": [ "top", "bottom" ]
+        }
+    }
+}

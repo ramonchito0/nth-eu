@@ -1,0 +1,20 @@
+{
+    "name": "nds/featured-vibe",
+    "title": "Featured Vibe",
+    "description": "A featured vibe block.",
+    "style": [ "file:./style.css" ],
+    "category": "nds-blocks",
+    "icon": "ellipsis",
+    "keywords": ["featured", "vibe"],
+    "acf": {
+        "blockVersion": 3,
+        "mode": "preview",
+        "renderTemplate": "featured-vibe.php"
+    },
+    "supports": {
+        "anchor": true,
+        "spacing": {
+            "margin": [ "top", "bottom" ]
+        }
+    }
+}
