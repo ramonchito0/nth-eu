@@ -1,7 +1,7 @@
 {
     "name": "nds/component",
-    "title": "Component",
-    "description": "A custom component block with various styles and options.",
+    "title": "Reusable Component",
+    "description": "A custom reusable component block with various styles and options.",
     "style": [ "file:./style.css" ],
     "category": "nds-blocks",
     "icon": "button",

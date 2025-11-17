@@ -10,11 +10,15 @@
       "button_label": "Add Slide",
       "sub_fields": [
         {
-          "key": "field_image",
-          "label": "Background Image",
-          "name": "image",
-          "type": "image",
-          "return_format": "url"
+          "key": "field_post",
+          "label": "Property",
+          "name": "property",
+          "type": "post_object",
+          "post_type": [
+            "property"
+          ],
+          "ui": 1,
+          "return_format": "object"
         },
         {
           "key": "field_featured",
@@ -22,36 +26,6 @@
           "name": "featured",
           "type": "true_false",
           "ui": 1
-        },
-        {
-          "key": "field_heading",
-          "label": "Heading",
-          "name": "heading",
-          "type": "text"
-        },
-        {
-          "key": "field_description",
-          "label": "Description",
-          "name": "description",
-          "type": "textarea"
-        },
-        {
-          "key": "field_location",
-          "label": "Location",
-          "name": "location",
-          "type": "text"
-        },
-        {
-          "key": "field_guests",
-          "label": "Guests",
-          "name": "guests",
-          "type": "text"
-        },
-        {
-          "key": "field_link",
-          "label": "Link Button",
-          "name": "link",
-          "type": "link"
         }
       ]
     }

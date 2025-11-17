@@ -254,6 +254,9 @@
   .-right-14 {
     right: calc(var(--spacing) * -14);
   }
+  .right-14 {
+    right: calc(var(--spacing) * 14);
+  }
   .right-\[8\%\] {
     right: 8%;
   }
@@ -277,6 +280,12 @@
   }
   .left-6 {
     left: calc(var(--spacing) * 6);
+  }
+  .left-14 {
+    left: calc(var(--spacing) * 14);
+  }
+  .z-20 {
+    z-index: 20;
   }
   .z-30 {
     z-index: 30;
@@ -408,9 +417,6 @@
   .table {
     display: table;
   }
-  .\!h-10 {
-    height: calc(var(--spacing) * 10) !important;
-  }
   .h-\[2\.25rem\] {
     height: 2.25rem;
   }
@@ -438,6 +444,9 @@
   .h-\[320px\] {
     height: 320px;
   }
+  .h-\[620px\] {
+    height: 620px;
+  }
   .h-\[650px\] {
     height: 650px;
   }
@@ -464,9 +473,6 @@
   }
   .min-h-\[100vh\] {
     min-height: 100vh;
-  }
-  .\!w-10 {
-    width: calc(var(--spacing) * 10) !important;
   }
   .w-\[2\.25rem\] {
     width: 2.25rem;
@@ -838,6 +844,12 @@
   .px-7\.5 {
     padding-inline: calc(var(--spacing) * 7.5);
   }
+  .px-14 {
+    padding-inline: calc(var(--spacing) * 14);
+  }
+  .px-16 {
+    padding-inline: calc(var(--spacing) * 16);
+  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
@@ -852,6 +864,12 @@
   }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
+  }
+  .py-12 {
+    padding-block: calc(var(--spacing) * 12);
+  }
+  .py-14 {
+    padding-block: calc(var(--spacing) * 14);
   }
   .py-\[1\.3125rem\] {
     padding-block: 1.3125rem;
@@ -909,6 +927,9 @@
   }
   .pb-7\.5 {
     padding-bottom: calc(var(--spacing) * 7.5);
+  }
+  .pb-12 {
+    padding-bottom: calc(var(--spacing) * 12);
   }
   .pb-14 {
     padding-bottom: calc(var(--spacing) * 14);
@@ -1087,11 +1108,6 @@
   .shadow-\[0_12px_34px_rgba\(0\,0\,0\,0\.12\)\] {
     --tw-shadow: 0 12px 34px var(--tw-shadow-color, rgba(0,0,0,0.12));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .drop-shadow {
-    --tw-drop-shadow-size: drop-shadow(0 1px 2px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.1))) drop-shadow(0 1px 1px var(--tw-drop-shadow-color, rgb(0 0 0 / 0.06)));
-    --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow( 0 1px 1px rgb(0 0 0 / 0.06));
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);

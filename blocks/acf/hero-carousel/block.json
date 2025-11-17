@@ -4,6 +4,7 @@
   "description": "Full-width hero slider with property/venue info.",
   "category": "nthdegree",
   "icon": "slides",
+  "style": [ "file:./style.css" ],
   "apiVersion": 2,
   "acf": {
     "mode": "preview",
