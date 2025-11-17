@@ -1,0 +1,18 @@
+{
+  "name": "nds/hero-carousel",
+  "title": "Hero Carousel",
+  "description": "Full-width hero slider with property/venue info.",
+  "category": "nthdegree",
+  "icon": "slides",
+  "apiVersion": 2,
+  "acf": {
+    "mode": "preview",
+    "blockVersion": 3,
+    "renderTemplate": "hero-carousel.php"
+  },
+  "supports": {
+    "align": false,
+    "anchor": true,
+    "jsx": true
+  }
+}

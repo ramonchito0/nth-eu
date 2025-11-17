@@ -10,6 +10,16 @@
         { "slug": "body", "color": "#F9F8F6", "name": "Body" }
       ]
     },
+    "dimensions": {
+      "minHeight": true
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": true,
+      "units": [ "px","em","rem", "%", "vw", "vh" ],
+      "customSpacingSize": true
+    },    
     "blocks": {
       "core/image": {
         "border": {
@@ -17,7 +27,7 @@
           "style": true,
           "width": true
         }
-      }
+      }    
     },
     "typography": {
       "fontFamilies": [
@@ -35,15 +45,13 @@
       "fontSizes": [
         { "name": "text-12 (S)", "slug": "text-12", "size": "12px" },
         { "name": "text-16 (M)", "slug": "text-16", "size": "16px" },
+        { "name": "text-18 (M)", "slug": "text-18", "size": "18px" },
         { "name": "text-20 (M)", "slug": "text-20", "size": "20px" },
         { "name": "text-24 (L)", "slug": "text-24", "size": "24px" },
         { "name": "text-32 (XL)", "slug": "text-32", "size": "32px" },
         { "name": "text-56 (XXL)", "slug": "text-56", "size": "56px" }
       ],
       "customLineHeights": true
-    },
-    "spacing": {
-      "customPadding": true
     }
   },
   "styles": {

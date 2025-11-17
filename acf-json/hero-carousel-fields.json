@@ -1,0 +1,68 @@
+{
+  "key": "group_hero_carousel",
+  "title": "Hero Carousel",
+  "fields": [
+    {
+      "key": "field_slides",
+      "label": "Slides",
+      "name": "slides",
+      "type": "repeater",
+      "button_label": "Add Slide",
+      "sub_fields": [
+        {
+          "key": "field_image",
+          "label": "Background Image",
+          "name": "image",
+          "type": "image",
+          "return_format": "url"
+        },
+        {
+          "key": "field_featured",
+          "label": "Featured?",
+          "name": "featured",
+          "type": "true_false",
+          "ui": 1
+        },
+        {
+          "key": "field_heading",
+          "label": "Heading",
+          "name": "heading",
+          "type": "text"
+        },
+        {
+          "key": "field_description",
+          "label": "Description",
+          "name": "description",
+          "type": "textarea"
+        },
+        {
+          "key": "field_location",
+          "label": "Location",
+          "name": "location",
+          "type": "text"
+        },
+        {
+          "key": "field_guests",
+          "label": "Guests",
+          "name": "guests",
+          "type": "text"
+        },
+        {
+          "key": "field_link",
+          "label": "Link Button",
+          "name": "link",
+          "type": "link"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "nds/hero-carousel"
+      }
+    ]
+  ]
+}
