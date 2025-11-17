@@ -15,14 +15,6 @@ add_action('init', function() {
     register_block_style(
         'core/button',
         [
-            'name'  => 'btn-default-variant',
-            'label' => 'Default',
-        ]
-    );
-
-    register_block_style(
-        'core/button',
-        [
             'name'  => 'btn-secondary',
             'label' => 'Secondary'
         ]

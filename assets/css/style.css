@@ -80,7 +80,7 @@
 }
 
 /* Variants */
-.wp-block-button.is-style-btn-default-variant .wp-block-button__link,
+.wp-block-button.is-style-fill .wp-block-button__link,
 .btn-default-variant {
   background-color: var(--color-primary);
   color: #fff;
@@ -119,10 +119,6 @@
   background-color: transparent;
   color: var(--color-primary);
   border: none;
-}
-.wp-block-button.is-style-btn-ghost .wp-block-button__link:hover,
-.btn-ghost:hover {
-  background-color: rgba(0, 0, 0, 0.05);
 }
 
 /* Active state */
@@ -165,6 +161,16 @@
   font-size: 18px;
   background: var(--color-accent);
   color: var(--color-primary);
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+    font-size: small;
+    position: absolute;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
+  background-color: var(--color-accent);
+  font-size: small;
 }
 
 .wpcf7 {

@@ -7,7 +7,8 @@ function nds_enqueue_scripts() {
 	$theme = wp_get_theme();
 
 	wp_enqueue_style( 'swiperjs', nds_asset( 'assets/css/swiper-bundle.min.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_style( 'nds', nds_asset( 'assets/css/style.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'nds', nds_asset( 'assets/css/nth.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'nds-style', nds_asset( 'assets/css/style.css' ), array(), $theme->get( 'Version' ) );
 
 
 	wp_enqueue_script( 'swiperjs', nds_asset( 'assets/js/swiper-bundle.min.js' ), '', $theme->get( 'Version' ), true );
