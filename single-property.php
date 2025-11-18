@@ -34,7 +34,7 @@
             
                 <?php get_template_part( 'template-parts/property-single-gallery' ); ?>
                 <div class="h-[30px] lg:h-[50px]"></div>
-                <div class="flex flex-col lg:flex-row gap-10">
+                <div class="flex flex-col lg:flex-row gap-10 mt-8">
                     <div>
                         <?php get_template_part( 'template-parts/property-single-header' ); ?>
 

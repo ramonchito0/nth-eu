@@ -10,7 +10,7 @@
             $description = get_sub_field('description');
         ?>
 
-        <div class="flex items-start gap-4">
+        <div class="flex items-center gap-4">
 
             <!-- Icon circle -->
             <div class="shrink-0 w-16 h-16 rounded-full bg-[#D7CFC5] flex items-center justify-center">

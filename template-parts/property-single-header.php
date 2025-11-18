@@ -1,4 +1,4 @@
-            <section class="flex flex-col gap-8 mt-8">
+            <section class="flex flex-col gap-8">
                 <!-- Title -->
                 <h1 class="h-text-56 !mb-0">
                     <?php the_title(); ?>
