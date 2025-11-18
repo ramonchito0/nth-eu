@@ -35,6 +35,9 @@
 @source inline('grid-cols-{1,2,3,4,5,6}');
 @source inline('justify-{start,end,center,between,around}');
 @source inline('shrink-0');
+@source inline('col-span-2');
+@source inline('text-[#B9886A]');
+@source inline('mb-2');
 @source inline('!mt-auto');
 @source inline('!mt-0');
 @source inline('!mb-0');

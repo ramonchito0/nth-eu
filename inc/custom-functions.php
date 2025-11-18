@@ -37,3 +37,5 @@ function my_acf_google_map_api( $api ){
     return $api;
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
+
+add_filter('wpcf7_autop_or_not', '__return_false');

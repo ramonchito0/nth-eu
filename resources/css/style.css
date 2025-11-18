@@ -164,13 +164,13 @@
 }
 
 .wpcf7 .wpcf7-not-valid-tip {
-    font-size: small;
+    font-size: 10px;
     position: absolute;
 }
 
 .wpcf7 form.invalid .wpcf7-response-output, .wpcf7 form.unaccepted .wpcf7-response-output, .wpcf7 form.payment-required .wpcf7-response-output {
   background-color: var(--color-accent);
-  font-size: small;
+  font-size: 10px;
 }
 
 .wpcf7 {
@@ -182,6 +182,27 @@
     bottom: -30px;
     margin: 0px;
 }
+
+.wpcf7 select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 1.05983L6 6.98291L0.5 1.05983' stroke='%235F5F5F' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;  
+    background-size: 12px 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.wpcf7 select {
+    padding-right: 40px !important;
+}
+
+.wpcf7 select {
+    cursor: pointer;
+}
+
 
 .newsletter-form p {
     display: flex;
@@ -196,6 +217,7 @@ input[type="url"],
 input[type="password"], 
 input[type="search"], 
 input[type="tel"], 
+input[type="date"], 
 textarea, 
 select {
     width: 100%;
@@ -211,6 +233,10 @@ select {
     border-image: initial;
     border-radius: 8px;
     outline: none;
+}
+
+textarea {
+  height: auto;
 }
 
 input[type="submit"], 
@@ -230,6 +256,27 @@ button[type="submit"] {
     transition: 0.2s;
     white-space: nowrap;
 }
+
+.property-form :is(
+  input[type="submit"],
+  button[type="submit"]
+) {
+   width: 100%;
+}
+
+.property-form :is(
+  input,
+  textarea,
+  select
+) {
+  border-color: var(--color-accent);
+  height: 48px;
+}
+
+.property-form textarea {
+   height: 137px;
+}
+
 
 .nth-blog-list {
     display: grid;
@@ -308,6 +355,11 @@ button[type="submit"] {
 .offer-icon.icon-wheelchair-access { background-image: url('/wp-content/themes/nthdegreesearch/assets/images/icon-wheelchair-access.svg'); }
 .offer-icon.icon-adult-only { background-image: url('/wp-content/themes/nthdegreesearch/assets/images/icon-adult-only.svg'); }
 
+.why-icon {background-size: contain;background-repeat: no-repeat;background-position: center;}
+.why-icon.icon-badge { background-image: url('/wp-content/themes/nthdegreesearch/assets/images/eu-icon-badge.svg'); }
+.why-icon.icon-building { background-image: url('/wp-content/themes/nthdegreesearch/assets/images/eu-icon-building.svg'); }
+.why-icon.icon-gift { background-image: url('/wp-content/themes/nthdegreesearch/assets/images/eu-icon-gift.svg'); }
+.why-icon.icon-shield { background-image: url('/wp-content/themes/nthdegreesearch/assets/images/eu-icon-shield.svg'); }
 
 
 /* Responsive rules */

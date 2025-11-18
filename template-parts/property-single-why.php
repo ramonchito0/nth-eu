@@ -13,7 +13,7 @@
         <div class="flex items-start gap-4">
 
             <!-- Icon circle -->
-            <div class="w-16 h-16 rounded-full bg-[#D7CFC5] flex items-center justify-center">
+            <div class="shrink-0 w-16 h-16 rounded-full bg-[#D7CFC5] flex items-center justify-center">
                 <!-- Dynamic icon class (same as Property Offers) -->
                 <span class="why-icon <?php echo esc_attr($icon); ?> w-6 h-6 block"></span>
             </div>
