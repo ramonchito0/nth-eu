@@ -7,14 +7,17 @@ function nds_enqueue_scripts() {
 	$theme = wp_get_theme();
 
 	wp_enqueue_style( 'swiperjs', nds_asset( 'assets/css/swiper-bundle.min.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_style( 'nds', nds_asset( 'assets/css/nth.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'nds-style', nds_asset( 'assets/css/style.css' ), array(), $theme->get( 'Version' ) );
+	
+	
+	wp_enqueue_script( 'google-maps', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAqRyXPKHl_eW8E0jd1qqMuo1gJKKnxF54', array(), null, true );
 
 
 	wp_enqueue_script( 'swiperjs', nds_asset( 'assets/js/swiper-bundle.min.js' ), '', $theme->get( 'Version' ), true );
 	wp_enqueue_script( 'nds', nds_asset( 'assets/js/script.js' ), array('jquery'), $theme->get( 'Version' ), true );
 	
 }
+
 
 
 /**
@@ -26,7 +29,6 @@ function nds_block_enqueues() {
 
 	wp_enqueue_style( 'swiperjs', nds_asset( 'assets/css/swiper-bundle.min.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_script( 'swiperjs', nds_asset( 'assets/js/swiper-bundle.min.js' ), '', $theme->get( 'Version' ), true );
-	wp_enqueue_style( 'nds', nds_asset( 'assets/css/nth.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'nds-header', nds_asset( 'assets/css/header.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'nds-footer', nds_asset( 'assets/css/footer.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'nds-style', nds_asset( 'assets/css/style.css' ), array(), $theme->get( 'Version' ) );
@@ -47,7 +49,6 @@ function nds_block_enqueues_canvas() {
 
 	wp_enqueue_style( 'swiperjs', nds_asset( 'assets/css/swiper-bundle.min.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_script( 'swiperjs', nds_asset( 'assets/js/swiper-bundle.min.js' ), '', $theme->get( 'Version' ), true );
-	wp_enqueue_style( 'nds', nds_asset( 'assets/css/nth.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'nds-header', nds_asset( 'assets/css/header.css' ), array(), $theme->get( 'Version' ) );
 	wp_enqueue_style( 'nds-footer', nds_asset( 'assets/css/footer.css' ), array(), $theme->get( 'Version' ) );	
 	wp_enqueue_style( 'nds-style', nds_asset( 'assets/css/style.css' ), array(), $theme->get( 'Version' ) );	

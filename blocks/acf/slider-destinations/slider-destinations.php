@@ -3,7 +3,7 @@
     $destinations = get_field('destinations');
     if (!$destinations) return;
 ?>
-<div class="relative w-full max-w-[1520px] mx-auto pt-10 pb-14 md:pb-20 px-5">
+<div class="nds-destinations relative w-full max-w-[1520px] mx-auto pt-10 pb-14 md:pb-20 px-5">
 
     <div class="swiper nds-destinations-swiper">
         <div class="swiper-wrapper">
@@ -91,17 +91,5 @@ document.addEventListener("DOMContentLoaded", function () {
             480:  { slidesPerView: 1 }
         }
     });
-
-    /* Bullet colors */
-    const observer = new MutationObserver(() => {
-        document.querySelectorAll('.swiper-pagination-bullet').forEach(b => {
-            b.style.background = '#D0D0D0';
-            b.style.opacity = '1';
-        });
-        const active = document.querySelector('.swiper-pagination-bullet-active');
-        if (active) active.style.background = '#5F5F5F';
-    });
-
-    observer.observe(document.body, { childList: true, subtree: true });
 });
 </script>

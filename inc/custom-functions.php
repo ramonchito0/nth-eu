@@ -29,3 +29,11 @@ add_action('init', function() {
     );
 
 });
+
+
+/* Google map api */
+function my_acf_google_map_api( $api ){
+    $api['key'] = 'AIzaSyAqRyXPKHl_eW8E0jd1qqMuo1gJKKnxF54';
+    return $api;
+}
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');

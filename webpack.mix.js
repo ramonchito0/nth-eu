@@ -15,7 +15,7 @@ mix.webpackConfig({
 
 mix.js('resources/js/app.js', 'js/script.js');
 
-mix.postCss('resources/css/app.css', 'css/nth.css', postCss);
+mix.postCss('resources/css/app.css', 'css/style.css', postCss);
 
 mix.postCss("resources/css/editor-style.css", "css", postCss);
 

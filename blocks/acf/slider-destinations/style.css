@@ -1,0 +1,12 @@
+
+.nds-destinations .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
+
+.nds-destinations .swiper-pagination .swiper-pagination-bullet {
+    background-color: #D0D0D0;
+}
+.nds-destinations .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #5F5F5F;
+}

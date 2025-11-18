@@ -2,280 +2,307 @@
     "key": "group_property_details",
     "title": "Property Details",
     "fields": [
+
         {
-            "key": "field_691b1db938b4c",
-            "label": "Short Description",
-            "name": "short_description",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
+            "key": "field_property_gallery",
+            "label": "Gallery",
+            "name": "gallery",
+            "type": "gallery",
+            "instructions": "Upload property images",
             "required": 0,
-            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "acfe_textarea_code": 0,
-            "maxlength": "",
-            "allow_in_bindings": 1,
-            "rows": 2,
-            "placeholder": "",
-            "new_lines": ""
+            "return_format": "array",
+            "preview_size": "medium",
+            "insert": "append",
+            "library": "all",
+            "min": "",
+            "max": "",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+
+        {
+            "key": "field_691b1db938b4c",
+            "label": "Short Description",
+            "name": "short_description",
+            "type": "textarea",
+            "rows": 2
         },
         {
             "key": "field_property_description",
             "label": "Description",
             "name": "description",
-            "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "allow_in_bindings": 0,
             "tabs": "all",
             "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
+            "media_upload": 0
         },
+
         {
-            "key": "field_property_location",
-            "label": "Location",
-            "name": "location",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "key": "field_property_vibe",
+            "label": "Vibe",
+            "name": "vibe",
+            "type": "select",
+            "multiple": 1,
+            "ui": 1,
+            "choices": {
+                "coastal_retreats": "Coastal Retreats",
+                "mountain_escapes": "Mountain Escapes",
+                "forest_hideaways": "Forest Hideaways",
+                "country_estates": "Country Estates",
+                "island_sanctuaries": "Island Sanctuaries",
+                "desert_horizons": "Desert Horizons",
+                "urban_oasis": "Urban Oasis",
+                "open_suggestions": "I’m open to suggestions"
+            }
         },
+
         {
-            "key": "field_property_guest_range",
-            "label": "Guest Range",
-            "name": "guest_range",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "key": "field_property_event_type",
+            "label": "Event Type",
+            "name": "event_type",
+            "type": "select",
+            "multiple": 1,
+            "ui": 1,
+            "choices": {
+                "executive_retreat": "Executive Retreat",
+                "workshops": "Workshop",
+                "wellness_retreat": "Wellness Retreat",
+                "exclusive_use": "Exclusive Use",
+                "celebrations": "Celebrations & Milestones",
+                "team_building": "Team Building",
+                "personal_stay": "Personal Stay"
+            }
         },
+
+        {
+            "key": "field_property_style",
+            "label": "Style",
+            "name": "style",
+            "type": "select",
+            "multiple": 1,
+            "ui": 1,
+            "choices": {
+                "heritage": "Heritage",
+                "contemporary": "Contemporary",
+                "eco_luxury": "Eco Luxury",
+                "boutique_villas": "Boutique Villas",
+                "converted_spaces": "Converted Spaces",
+                "open_suggestions": "I’m open to suggestions"
+            }
+        },
+
+        {
+            "key": "field_property_guest_count",
+            "label": "No. of Guests",
+            "name": "guest_count",
+            "type": "select",
+            "multiple": 0,
+            "ui": 1,
+            "choices": {
+                "1-5": "Just for You (1-5 people)",
+                "5-10": "5-10 people",
+                "11-20": "11-20 people",
+                "21-30": "21-30 people",
+                "31-50": "31-50 people",
+                "51-70": "51-70 people",
+                "79-100": "79-100 people",
+                "100+": "100+ people"
+            }
+        },
+
+        {
+            "key": "field_property_destination",
+            "label": "Destination",
+            "name": "destination",
+            "type": "select",
+            "multiple": 1,
+            "ui": 1,
+            "choices": {
+                "nsw": "NSW",
+                "vic": "VIC",
+                "qld": "QLD",
+                "sa": "SA",
+                "act": "ACT",
+                "nt": "NT",
+                "wa": "WA",
+                "tas": "TAS",
+                "nz": "NZ"
+            }
+        },
+
         {
             "key": "field_property_offers",
             "label": "Property Offers",
             "name": "property_offers",
-            "aria-label": "",
             "type": "repeater",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "min": 0,
-            "max": 0,
-            "rows_per_page": 20,
             "layout": "table",
             "button_label": "Add Row",
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0,
             "sub_fields": [
                 {
                     "key": "field_property_offer_icon",
                     "label": "Icon",
                     "name": "icon",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_property_offers"
+                    "type": "select",
+                    "ui": 1,
+                    "instructions": "Select an icon",
+                    "choices": {
+                        "icon-wifi": "WiFi",
+                        "icon-restaurant": "Restaurant",
+                        "icon-catering": "Catering Service",
+                        "icon-self-contained": "Self-Contained",
+                        "icon-parking": "Parking",
+                        "icon-bar": "Bar",
+                        "icon-pool": "Swimming Pool",
+                        "icon-gym": "Gym",
+                        "icon-spa": "Spa",
+                        "icon-meeting-rooms": "Meeting Rooms",
+                        "icon-wheelchair-access": "Wheelchair Access",
+                        "icon-adult-only": "Adult Only"
+                    }
                 },
                 {
                     "key": "field_property_offer_label",
                     "label": "Label",
                     "name": "label",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": false,
-                    "conditional_logic": false,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_property_offers"
+                    "type": "text"
                 }
             ]
         },
+
         {
-            "key": "field_property_feature_rooms",
-            "label": "Number of Guest Rooms",
-            "name": "feature_rooms",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "key": "field_property_features_repeater",
+            "label": "Features",
+            "name": "features",
+            "type": "repeater",
+            "instructions": "Add key features of the property and their details.",
+            "layout": "table",
+            "button_label": "Add Feature",
+            "sub_fields": [
+                {
+                    "key": "field_property_feature_label",
+                    "label": "Feature",
+                    "name": "label",
+                    "type": "text",
+                    "instructions": "Example: Number of Guest Rooms"
+                },
+                {
+                    "key": "field_property_feature_value",
+                    "label": "Destination",
+                    "name": "value",
+                    "type": "textarea",
+                    "rows": 2,
+                    "instructions": "Example: 100 (standing), 80 (seated), 30 overnight"
+                }
+            ]
         },
-        {
-            "key": "field_property_feature_event_type",
-            "label": "Event Type",
-            "name": "feature_event_type",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_property_feature_event_space",
-            "label": "Event Space (Seated)",
-            "name": "feature_event_space",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
+
         {
             "key": "field_property_why_we_like",
             "label": "Why We Like It",
             "name": "why_we_like",
-            "aria-label": "",
             "type": "repeater",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "min": 0,
-            "max": 0,
-            "rows_per_page": 20,
             "layout": "table",
-            "button_label": "Add Row",
-            "collapsed": "",
-            "acfe_repeater_stylised_button": 0,
-            "sub_fields": []
+            "button_label": "Add Item",
+            "sub_fields": [
+                {
+                    "key": "field_property_why_icon",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "select",
+                    "ui": 1,
+                    "choices": {
+                        "icon-badge": "Badge",
+                        "icon-building": "Building",
+                        "icon-gift": "Gift",
+                        "icon-shield": "Shield"
+                    }
+                },
+                {
+                    "key": "field_property_why_title",
+                    "label": "Title",
+                    "name": "title",
+                    "type": "text"
+                },
+                {
+                    "key": "field_property_why_description",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "textarea",
+                    "rows": 3
+                }
+            ]
         },
+
         {
-            "key": "field_property_map_address",
-            "label": "Map Address",
-            "name": "map_address",
-            "aria-label": "",
+            "key": "field_property_street",
+            "label": "Street",
+            "name": "street",
             "type": "text",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "instructions": "Example: 27 Darling Crescent"
         },
         {
-            "key": "field_property_map_embed",
-            "label": "Map Embed",
-            "name": "map_embed",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": false,
-            "conditional_logic": false,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "new_lines": "",
-            "maxlength": "",
-            "placeholder": "",
-            "rows": "",
-            "acfe_textarea_code": 0
+            "key": "field_property_city",
+            "label": "City",
+            "name": "city",
+            "type": "text",
+            "instructions": "Example: Sydney",
+            "required": 1
+        },
+        {
+            "key": "field_property_state",
+            "label": "State",
+            "name": "state",
+            "type": "text",
+            "instructions": "Example: NSW",
+            "required": 1
+        },
+        {
+            "key": "field_property_postal_code",
+            "label": "Postal Code",
+            "name": "postal_code",
+            "type": "text",
+            "instructions": "Example: 2000"
+        },
+        {
+            "key": "field_property_country",
+            "label": "Country",
+            "name": "country",
+            "type": "text",
+            "default_value": "Australia",
+            "required": 1
+        },
+        {
+            "key": "field_property_lat",
+            "label": "Latitude",
+            "name": "lat",
+            "type": "number",
+            "instructions": "Get coordinates from https://www.latlong.net/",
+            "required": 1,
+            "step": "any",
+            "wrapper": { "width": "50" }
+        },
+        {
+            "key": "field_property_lng",
+            "label": "Longitude",
+            "name": "lng",
+            "type": "number",
+            "instructions": "Get coordinates from https://www.latlong.net/",
+            "required": 1,
+            "step": "any",
+            "wrapper": { "width": "50" }
         }
     ],
+
     "location": [
         [
             {
@@ -285,22 +312,7 @@
             }
         ]
     ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "",
-    "show_in_rest": 0,
-    "display_title": "",
-    "acfe_display_title": "",
-    "acfe_autosync": [
-        "json"
-    ],
-    "acfe_form": 0,
-    "acfe_meta": "",
-    "acfe_note": "",
-    "modified": 1763384989
+
+    "acfe_autosync": ["json"],
+    "active": true
 }

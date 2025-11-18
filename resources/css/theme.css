@@ -1,5 +1,4 @@
 @theme {
-
   /* Colors (replaced with your CSS values) */
   --color-primary: #1C1C1C;
   --color-accent: #D7CFC5;
@@ -14,17 +13,17 @@
   --text-body-weight: 400;
 
   /* Existing WP-linked tokens stay */
-  --color-body-base: var(--wp--preset--color--base);
-  --color-secondary: var(--wp--preset--color--secondary);
+  --color-body-base: var(--color-primary);
+  --color-secondary: var(--color-accent);
 
-  --text-xs: var(--wp--preset--font-size--xs);
-  --text-sm: var(--wp--preset--font-size--sm);
-  --text-md: var(--wp--preset--font-size--md);
-  --text-2md: var(--wp--preset--font-size--md-2);
-  --text-3md: var(--wp--preset--font-size--md-3);
-  --text-lg: var(--wp--preset--font-size--lg);
-  --text-2xl: var(--wp--preset--font-size--2-xl);
-  --text-3xl: var(--wp--preset--font-size--3-xl);
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-2md: 18px;
+  --text-3md: 20px;
+  --text-lg: 24px;
+  --text-2xl: 32px;
+  --text-3xl: 48px;
 
   --spacing-30: 1.875rem;
 }
