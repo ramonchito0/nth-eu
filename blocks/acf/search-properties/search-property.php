@@ -22,224 +22,65 @@ $search_form_only = get_field('search_form_only');
 $filterByCategory = get_field('property_category');
 ?>
 
+
+<?php
+$fields = [
+    'vibe' => [
+        'enabled' => $vibeField,
+        'label'   => 'Select Vibe',
+        'choices' => $vibe_choices
+    ],
+    'event_type' => [
+        'enabled' => $eventField,
+        'label'   => 'Select Event Type',
+        'choices' => $event_choices
+    ],
+    'style' => [
+        'enabled' => $styleField,
+        'label'   => 'Select Style',
+        'choices' => $style_choices
+    ],
+    'guests' => [
+        'enabled' => $guestField,
+        'label'   => 'Select Guests',
+        'choices' => $guest_choices
+    ],
+    'destination' => [
+        'enabled' => $destinationField,
+        'label'   => 'Select Destination',
+        'choices' => $dest_choices
+    ]
+];
+?>
+
 <?php if ($search_form_only): ?>
-    <div class="nds-search-form-only">
-            <form action="<?php echo site_url('/property-for-events-listing/'); ?>" method="get" class="flex flex-col lg:flex-row gap-4 items-center">
+<div class="nds-search-form-only">
+    <form action="<?= site_url('/property-for-events-listing/'); ?>" method="get" class="flex flex-col lg:flex-row gap-4 items-center">
 
-                <!-- Vibe -->
-                <?php if (!empty($vibeField)): ?> 
-                    <select name="vibe">
-                        <option value="">Select Vibe</option>
+        <?php 
+        foreach ($fields as $name => $field) {
+            nds_dropdown($field['enabled'], $name, $field['label'], $field['choices']);
+        }
+        ?>
 
-                        <?php 
-                        $selected_vibe = isset($_GET['vibe']) ? $_GET['vibe'] : '';
-                        foreach ($vibe_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_vibe, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-
-                <!-- Event Type -->
-                <?php if (!empty($eventField)): ?>
-                    <select name="event_type">
-                        <option value="">Select Event Type</option>
-
-                        <?php 
-                        $selected_event = isset($_GET['event_type']) ? $_GET['event_type'] : '';
-                        foreach ($event_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_event, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-
-                <!-- Style -->
-                <?php if (!empty($styleField)): ?>
-                    <select name="style">
-                        <option value="">Select Style</option>
-
-                        <?php 
-                            $selected_style = isset($_GET['style']) ? $_GET['style'] : '';
-                            foreach ($style_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_style, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-
-                <!-- Guests -->
-                <?php if (!empty($guestField)): ?>
-                    <select name="guests">
-                        <option value="">Select Guests</option>
-
-                        <?php 
-                            $selected_guests = isset($_GET['guests']) ? $_GET['guests'] : '';
-                            foreach ($guest_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_guests, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-
-                <!-- Destination -->
-                <?php if (!empty($destinationField)): ?>
-                    <select name="destination">
-                        <option value="">Select Destination</option>
-
-                        <?php 
-                            $selected_dest = isset($_GET['destination']) ? $_GET['destination'] : '';
-                            foreach ($dest_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_dest, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-
-                <!-- Search Button -->
-                <button type="submit">Search</button>
-
-            </form>
-    </div>
+        <button type="submit">Search</button>
+    </form>
+</div>
 <?php return; endif; ?>
+
 
 
 <form method="get" class="nds-search-property flex flex-col lg:flex-row gap-4 items-center">
 
-                <!-- Vibe -->
-                <?php if (!empty($vibeField)): ?> 
-                    <select name="vibe">
-                        <option value="">Select Vibe</option>
+    <?php 
+    foreach ($fields as $name => $field) {
+        nds_dropdown($field['enabled'], $name, $field['label'], $field['choices']);
+    }
+    ?>
 
-                        <?php 
-                        $selected_vibe = isset($_GET['vibe']) ? $_GET['vibe'] : '';
-                        foreach ($vibe_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_vibe, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
+    <input type="hidden" name="property_category" value="<?= esc_attr($filterByCategory); ?>">
 
-
-                <!-- Event Type -->
-                <?php if (!empty($eventField)): ?>
-                    <select name="event_type">
-                        <option value="">Select Event Type</option>
-
-                        <?php 
-                        $selected_event = isset($_GET['event_type']) ? $_GET['event_type'] : '';
-                        foreach ($event_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_event, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-
-                <!-- Style -->
-                <?php if (!empty($styleField)): ?>
-                    <select name="style">
-                        <option value="">Select Style</option>
-
-                        <?php 
-                            $selected_style = isset($_GET['style']) ? $_GET['style'] : '';
-                            foreach ($style_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr(strtolower($value)); ?>"
-                                <?= selected($selected_style, strtolower($value)); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-
-                <!-- Guests -->
-                <?php if (!empty($guestField)): ?>
-                    <select name="guests">
-                        <option value="">Select Guests</option>
-
-                        <?php 
-                            $selected_guests = isset($_GET['guests']) ? $_GET['guests'] : '';
-                            foreach ($guest_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_guests, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-
-                <!-- Destination -->
-                <?php if (!empty($destinationField)): ?>
-                    <select name="destination">
-                        <option value="">Select Destination</option>
-
-                        <?php 
-                            $selected_dest = isset($_GET['destination']) ? $_GET['destination'] : '';
-                            foreach ($dest_choices as $value => $label): 
-                        ?>
-                            <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_dest, $value); ?>
-                            >
-                                <?= esc_html($label); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                <?php endif; ?>
-
-                <input type="hidden" name="property_category" value="<?= esc_attr($filterByCategory); ?>">
-
-
-                    <!-- Search Button -->
-                    <button type="submit">Search</button>
+    <button type="submit">Search</button>
 
 </form>
 

@@ -249,7 +249,7 @@
             "label": "State",
             "name": "state",
             "type": "text",
-            "instructions": "Example: NSW",
+            "instructions": "Example: NSW. This will also be used for the destination filter.",
             "required": 1
         },
         {

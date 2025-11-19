@@ -107,7 +107,7 @@ function nds_filter_properties() {
             ?>
 
         <article class="<?php echo $promo ? 'bg-accent' : 'bg-white'; ?> rounded p-6 flex gap-4">
-            <?php echo $guests?>
+            
             <!-- Thumbnail -->
             <div class="w-[100px] h-[100px] rounded-full overflow-hidden flex-shrink-0">
                 <?= get_the_post_thumbnail( $post_id, 'thumbnail', ['class' => 'w-full h-full object-cover'] ); ?>
@@ -201,3 +201,126 @@ function nds_filter_properties() {
         'markers' => $markers
     ]);
 }
+
+
+/* helper function select fields */
+function nds_render_select_field($fieldEnabled, $name, $label, $choices) {
+    if (empty($fieldEnabled) || empty($choices)) {
+        return;
+    }
+
+    $selected = isset($_GET[$name]) ? $_GET[$name] : '';
+    ?>
+    <select name="<?= esc_attr($name); ?>">
+        <option value=""><?= esc_html($label); ?></option>
+
+        <?php foreach ($choices as $value => $text): ?>
+            <option 
+                value="<?= esc_attr($value); ?>"
+                <?= selected($selected, $value); ?>
+            >
+                <?= esc_html($text); ?>
+            </option>
+        <?php endforeach; ?>
+    </select>
+    <?php
+}
+
+/* helper function for alpine js fields */
+
+function nds_dropdown($fieldEnabled, $name, $label, $choices) {
+
+    if (empty($fieldEnabled) || empty($choices)) {
+        return;
+    }
+
+    $selected = isset($_GET[$name]) ? $_GET[$name] : '';
+    ?>
+
+    <div 
+        x-data="dropdown_<?= $name ?>()"
+        class="relative w-full"
+    >
+        <!-- Hidden GET field -->
+        <input type="hidden" name="<?= esc_attr($name) ?>" x-model="value">
+
+        <!-- Trigger -->
+        <button 
+            type="button"
+            @click="toggle()"
+            class="w-full bg-white border border-[#909191] rounded-lg px-4 py-3 text-left flex justify-between items-center"
+            x-ref="trigger"
+        >
+            <span x-text="selectedLabel || '<?= esc_html($label) ?>'"></span>
+
+            <!-- ORIGINAL CARET (your icon) -->
+            <svg width="12" height="9" viewBox="0 0 12 9" fill="none"
+                 xmlns="http://www.w3.org/2000/svg"
+                 class="transition-transform duration-200"
+                 :class="open ? 'rotate-180' : ''">
+                <path d="M11.5 1.05983L6 6.98291L0.5 1.05983" stroke="#5F5F5F" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+        </button>
+
+        <!-- Teleported dropdown -->
+        <template x-teleport="body">
+            <div 
+                x-show="open"
+                x-transition
+                @click.away="open = false"
+                class="absolute bg-white border border-[#909191] rounded-lg shadow-xl z-[9999]"
+                :style="`top:${coords.top}px; left:${coords.left}px; width:${coords.width}px`"
+            >
+                <template x-for="(label, val) in items" :key="val">
+                    <div 
+                        @click="select(val, label)"
+                        class="rounded-lg px-4 py-2 cursor-pointer hover:bg-[#F4F4F4]"
+                        :class="value === val ? 'bg-[#F4F4F4]' : ''"
+                        x-text="label"
+                    ></div>
+                </template>
+            </div>
+        </template>
+    </div>
+ <?php if (!wp_doing_ajax()): ?>
+    <script>
+        function dropdown_<?= $name ?>() {
+            return {
+                open: false,
+                value: "<?= esc_js($selected) ?>",
+                selectedLabel: "<?= esc_js($choices[$selected] ?? '') ?>",
+                items: <?= json_encode($choices) ?>,
+
+                coords: { top: 0, left: 0, width: 0 },
+
+                toggle() {
+                    this.open = !this.open;
+                    if (this.open) this.updatePosition();
+                },
+
+                updatePosition() {
+                    this.$nextTick(() => {
+                        const trigger = this.$refs.trigger;
+                        const rect = trigger.getBoundingClientRect();
+
+                        this.coords = {
+                            top: rect.bottom + window.scrollY + 6,
+                            left: rect.left + window.scrollX,
+                            width: rect.width
+                        };
+                    });
+                },
+
+                select(val, label) {
+                    this.value = val;
+                    this.selectedLabel = label;
+                    this.open = false;
+                }
+            }
+        }
+    </script>
+<?php endif; ?>
+    <?php
+}
+
+
