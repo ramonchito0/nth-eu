@@ -38,11 +38,5 @@ function my_acf_google_map_api( $api ){
 }
 add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
+/* remove auto paragraph in contact form 7 */
 add_filter('wpcf7_autop_or_not', '__return_false');
-
-/* for pagination */
-add_action('init', function() {
-    global $wp_rewrite;
-    $wp_rewrite->pagination_base = 'page';
-});
-

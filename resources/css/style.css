@@ -183,7 +183,7 @@
     margin: 0px;
 }
 
-.wpcf7 select {
+select {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -195,11 +195,11 @@
     padding-bottom: 5px;
 }
 
-.wpcf7 select {
+select {
     padding-right: 40px !important;
 }
 
-.wpcf7 select {
+select {
     cursor: pointer;
 }
 

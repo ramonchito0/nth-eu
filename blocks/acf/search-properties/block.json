@@ -1,15 +1,15 @@
 {
-    "name": "nds/search-properties",
-    "title": "Search Properties",
-    "description": "A search properties block.",
+    "name": "nds/search-property",
+    "title": "Search Property",
+    "description": "A search property block.",
     "style": [ "file:./style.css" ],
     "category": "nds-blocks",
     "icon": "admin-post",
-    "keywords": ["properties", "latest"],
+    "keywords": ["property", "latest"],
     "acf": {
         "blockVersion": 3,
         "mode": "preview",
-        "renderTemplate": "search-properties.php"
+        "renderTemplate": "search-property.php"
     },
     "supports": {
         "anchor": true,

@@ -6,4 +6,5 @@ require_once get_template_directory() . '/inc/template-tags.php';
 require_once get_template_directory() . '/inc/blocks.php';
 require_once get_template_directory() . '/inc/fonts.php';
 require_once get_template_directory() . '/inc/custom-functions.php';
+require_once get_template_directory() . '/inc/property-map.php';
 require_once get_template_directory() . '/inc/shortcodes.php';

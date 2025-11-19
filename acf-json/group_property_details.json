@@ -2,7 +2,13 @@
     "key": "group_property_details",
     "title": "Property Details",
     "fields": [
-
+        {
+          "key": "field_featured",
+          "label": "Featured?",
+          "name": "featured",
+          "type": "true_false",
+          "ui": 1
+        },
         {
             "key": "field_property_gallery",
             "label": "Gallery",

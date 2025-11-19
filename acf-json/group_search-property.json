@@ -1,0 +1,170 @@
+{
+  "key": "group_search_property_block",
+  "title": "Block: Search Property",
+  "fields": [
+
+    {
+      "key": "field_vibe",
+      "label": "Vibe",
+      "name": "vibe",
+      "type": "select",
+      "multiple": 1,
+      "ui": 1,
+      "choices": {
+        "coastal_retreats": "Coastal Retreats",
+        "mountain_escapes": "Mountain Escapes",
+        "forest_hideaways": "Forest Hideaways",
+        "country_estates": "Country Estates",
+        "island_sanctuaries": "Island Sanctuaries",
+        "desert_horizons": "Desert Horizons",
+        "urban_oasis": "Urban Oasis",
+        "open_suggestions": "I’m open to suggestions"
+      },
+      "default_value": [
+        "coastal_retreats",
+        "mountain_escapes",
+        "forest_hideaways",
+        "country_estates",
+        "island_sanctuaries",
+        "desert_horizons",
+        "urban_oasis",
+        "open_suggestions"
+      ]
+    },
+
+    {
+      "key": "field_event_type",
+      "label": "Event Type",
+      "name": "event_type",
+      "type": "select",
+      "multiple": 1,
+      "ui": 1,
+      "choices": {
+        "Executive Retreat": "Executive Retreat",
+        "Workshop": "Workshop",
+        "Wellness Retreat": "Wellness Retreat",
+        "Exclusive Use": "Exclusive Use",
+        "Celebrations & Milestones": "Celebrations & Milestones",
+        "Team Building": "Team Building",
+        "Personal Stay": "Personal Stay"
+      },
+      "default_value": [
+        "Executive Retreat",
+        "Workshop",
+        "Wellness Retreat",
+        "Exclusive Use",
+        "Celebrations & Milestones",
+        "Team Building",
+        "Personal Stay"
+      ]
+    },
+
+    {
+      "key": "field_style",
+      "label": "Style",
+      "name": "style",
+      "type": "select",
+      "multiple": 1,
+      "ui": 1,
+      "choices": {
+        "Heritage": "Heritage",
+        "Contemporary": "Contemporary",
+        "Eco Luxury": "Eco Luxury",
+        "Boutique Villas": "Boutique Villas",
+        "Converted Spaces": "Converted Spaces",
+        "I'm open to suggestions": "I'm open to suggestions"
+      },
+      "default_value": [
+        "Heritage",
+        "Contemporary",
+        "Eco Luxury",
+        "Boutique Villas",
+        "Converted Spaces",
+        "I'm open to suggestions"
+      ]
+    },
+
+    {
+      "key": "field_guests",
+      "label": "Guests",
+      "name": "guests",
+      "type": "select",
+      "multiple": 1,
+      "ui": 1,
+      "choices": {
+        "1-5": "Just for You (1–5 people)",
+        "5-10": "5–10 people",
+        "11-20": "11–20 people",
+        "21-30": "21–30 people",
+        "31-50": "31–50 people",
+        "51-70": "51–70 people",
+        "71-100": "71–100 people",
+        "100+": "100+ people"
+      },
+      "default_value": [
+        "1-5",
+        "5-10",
+        "11-20",
+        "21-30",
+        "31-50",
+        "51-70",
+        "71-100",
+        "100+"
+      ]
+    },
+
+    {
+      "key": "field_destination",
+      "label": "Destination",
+      "name": "destination",
+      "type": "select",
+      "multiple": 1,
+      "ui": 1,
+      "choices": {
+        "nsw": "NSW",
+        "vic": "VIC",
+        "qld": "QLD",
+        "sa": "SA",
+        "act": "ACT",
+        "nt": "NT",
+        "wa": "WA",
+        "tas": "TAS",
+        "nz": "NZ"
+      },
+      "default_value": [
+        "nsw",
+        "vic",
+        "qld",
+        "sa",
+        "act",
+        "nt",
+        "tas",
+        "wa",
+        "nz"
+      ]
+    },
+
+    {
+      "key": "field_search_form_only",
+      "label": "Search Form Only",
+      "name": "search_form_only",
+      "type": "true_false",
+      "ui": 1,
+      "default_value": 0,
+      "message": "Enable this if you want to show only the search form"
+    }
+
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "nds/search-property"
+      }
+    ]
+  ],
+  "style": "seamless",
+  "acfe_autosync": ["json"],
+  "active": true
+}

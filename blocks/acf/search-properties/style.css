@@ -1,51 +1,33 @@
-/* Pagination container */
-.page-numbers {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 12px; /* same as gap-3 */
+.nds-search-property :is(
+    input[type="submit"], 
+    button[type="submit"]
+) {
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
-/* Remove default bullets */
-.page-numbers li {
-    list-style: none;
+.nds-search-property select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.5 1.05983L6 6.98291L0.5 1.05983' stroke='%235F5F5F' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;  
+    background-size: 12px 9px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 40px !important;
+    cursor: pointer;
 }
 
-/* Default state */
-.page-numbers a,
-.page-numbers span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 40px;     /* w-10 */
-    height: 40px;    /* h-10 */
-
-    border-radius: 6px; /* rounded-md */
-    font-size: 14px; /* text-sm */
-
-    font-weight: 600;
-
-    color: #909191;
-    border: 1px solid var(--color-accent);
-    text-decoration: none;
-    background-color: #FFFFFF;
+/* Google Maps Info Window */
+.gm-style-iw-d {
+    overflow: auto !important;
 }
-
-/* Hover state */
-.page-numbers a:hover {
-    background-color: #F5F5F5;
+.gm-style-iw.gm-style-iw-c {
+    padding: 0;    
 }
-
-/* Active page */
-.page-numbers .current {
-    background-color: #1C1C1C;
-    color: #FFFFFF;
-    border-color: #1C1C1C;
-}
-
-/* Next/prev arrows */
-.page-numbers .next,
-.page-numbers .prev {
-    color: #1C1C1C;
+.gm-style-iw-chr {
+    position: absolute;
+    right: 0;
 }
