@@ -235,6 +235,8 @@ $filterByCategory = get_field('property_category');
                     </select>
                 <?php endif; ?>
 
+                <input type="hidden" name="property_category" value="<?= esc_attr($filterByCategory); ?>">
+
 
                     <!-- Search Button -->
                     <button type="submit">Search</button>
@@ -259,7 +261,7 @@ if ($filter_vibe) {
     $args['meta_query'][] = [
         'key'     => 'vibe',
         'value'   => $filter_vibe,
-        'compare' => '='
+        'compare' => 'LIKE'
     ];
 }
 
@@ -267,7 +269,7 @@ if ($filter_event) {
     $args['meta_query'][] = [
         'key'     => 'event_type',
         'value'   => $filter_event,
-        'compare' => '='
+        'compare' => 'LIKE'
     ];
 }
 
@@ -275,7 +277,7 @@ if ($filter_style) {
     $args['meta_query'][] = [
         'key'     => 'style',
         'value'   => $filter_style,
-        'compare' => '='
+        'compare' => 'LIKE'
     ];
 }
 

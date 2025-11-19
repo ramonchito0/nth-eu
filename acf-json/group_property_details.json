@@ -127,26 +127,6 @@
         },
 
         {
-            "key": "field_property_destination",
-            "label": "Destination",
-            "name": "destination",
-            "type": "select",
-            "multiple": 0,
-            "ui": 1,
-            "choices": {
-                "nsw": "NSW",
-                "vic": "VIC",
-                "qld": "QLD",
-                "sa": "SA",
-                "act": "ACT",
-                "nt": "NT",
-                "wa": "WA",
-                "tas": "TAS",
-                "nz": "NZ"
-            }
-        },
-
-        {
             "key": "field_property_offers",
             "label": "Property Offers",
             "name": "property_offers",

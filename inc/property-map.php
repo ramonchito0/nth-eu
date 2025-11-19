@@ -10,6 +10,7 @@ function nds_filter_properties() {
     $style  = $_POST['style'] ?? '';
     $guests = $_POST['guests'] ?? '';
     $dest   = $_POST['destination'] ?? '';
+    $category = $_POST['property_category'] ?? '';
 
     // Build query (same as your block)
     $args = [
@@ -58,6 +59,14 @@ function nds_filter_properties() {
         ];
     }
 
+    if( $category ) {
+        $args['tax_query'][] = [
+            'taxonomy' => 'property-category',
+            'field'    => 'slug',
+            'terms'    => $category,
+        ];
+    }    
+
     // Run query
     $query = new WP_Query($args);
 
@@ -94,6 +103,7 @@ function nds_filter_properties() {
             $state = get_field('state', $post_id);
             $guest = get_field('guest_count', $post_id);
             $promo = get_field('featured', $post_id);
+            
             ?>
 
         <article class="<?php echo $promo ? 'bg-accent' : 'bg-white'; ?> rounded p-6 flex gap-4">
@@ -180,6 +190,8 @@ function nds_filter_properties() {
                 'city'  => get_field('city', $post_id),
                 'state' => get_field('state', $post_id),
                 'link'  => get_permalink($post_id),
+                'guests' => get_field('guest_count', $post_id),
+                'image' => get_the_post_thumbnail_url($post_id, 'thumbnail'),
             ];
         }
     }

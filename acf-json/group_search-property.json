@@ -25,7 +25,7 @@
       "choices": {
         "" : "Default",
         "events": "Events",
-        "private_stays": "Private Stays"
+        "private-stays": "Private Stays"
       },
       "instructions": "Filters the results based on the property type. Leave as Default to include everything."
     },
