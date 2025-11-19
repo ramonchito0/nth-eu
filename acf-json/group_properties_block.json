@@ -1,0 +1,77 @@
+{
+  "key": "group_properties_block",
+  "title": "Block: Properties",
+  "fields": [
+    {
+      "key": "field_posts_per_page",
+      "label": "Posts Per Page",
+      "name": "posts_per_page",
+      "type": "number",
+      "default_value": 12,
+      "min": 1
+    },
+    {
+      "key": "field_property_terms",
+      "label": "Filter by Category",
+      "name": "property_terms",
+      "type": "taxonomy",
+      "taxonomy": "property-category",
+      "field_type": "multi_select",
+      "allow_null": 1,
+      "add_term": 0,
+      "save_terms": 0,
+      "load_terms": 0,
+      "return_format": "id",
+      "multiple": 1
+    },
+    {
+      "key": "field_orderby",
+      "label": "Order By",
+      "name": "orderby",
+      "type": "select",
+      "choices": {
+        "date": "Latest",
+        "title": "Title",
+        "menu_order": "Menu Order",
+        "rand": "Random"
+      },
+      "default_value": "date"
+    },
+    {
+      "key": "field_order",
+      "label": "Order",
+      "name": "order",
+      "type": "select",
+      "choices": {
+        "DESC": "Descending",
+        "ASC": "Ascending"
+      },
+      "default_value": "DESC"
+    },
+    {
+      "key": "field_enable_pagination",
+      "label": "Enable Pagination",
+      "name": "enable_pagination",
+      "type": "true_false",
+      "ui": 1,
+      "default_value": 0
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "nds/properties"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "acfe_autosync": ["json"],
+  "instruction_placement": "label",
+  "active": true,
+  "description": ""
+}

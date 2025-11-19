@@ -1,0 +1,20 @@
+{
+    "name": "nds/properties",
+    "title": "Properties",
+    "description": "A properties block.",
+    "style": [ "file:./style.css" ],
+    "category": "nds-blocks",
+    "icon": "admin-post",
+    "keywords": ["properties", "latest"],
+    "acf": {
+        "blockVersion": 3,
+        "mode": "preview",
+        "renderTemplate": "properties.php"
+    },
+    "supports": {
+        "anchor": true,
+        "spacing": {
+            "margin": [ "top", "bottom" ]
+        }
+    }
+}

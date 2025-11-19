@@ -1,0 +1,78 @@
+{
+  "key": "group_search_property_block",
+  "title": "Block: Search Property",
+  "fields": [
+    {
+      "key": "field_retreat_category",
+      "label": "Retreat Category",
+      "name": "retreat_category",
+      "type": "taxonomy",
+      "taxonomy": "retreat-category",
+      "field_type": "select",
+      "allow_null": 1,
+      "add_term": 0
+    },
+    {
+      "key": "field_property_type",
+      "label": "Property Type",
+      "name": "property_type",
+      "type": "taxonomy",
+      "taxonomy": "property-type",
+      "field_type": "select",
+      "allow_null": 1,
+      "add_term": 0
+    },
+    {
+      "key": "field_venue_type",
+      "label": "Venue Type",
+      "name": "venue_type",
+      "type": "taxonomy",
+      "taxonomy": "venue-type",
+      "field_type": "select",
+      "allow_null": 1,
+      "add_term": 0
+    },
+    {
+      "key": "field_capacity",
+      "label": "Capacity",
+      "name": "capacity",
+      "type": "select",
+      "choices": {
+        "1-20": "1–20 people",
+        "21-30": "21–30 people",
+        "31-50": "31–50 people",
+        "51-100": "51–100 people",
+        "100+": "100+ people"
+      },
+      "allow_null": 1
+    },
+    {
+      "key": "field_location",
+      "label": "Location",
+      "name": "location",
+      "type": "taxonomy",
+      "taxonomy": "state",
+      "field_type": "select",
+      "allow_null": 1
+    },
+    {
+      "key": "field_search_label",
+      "label": "Search Button Label",
+      "name": "search_label",
+      "type": "text",
+      "default_value": "Search"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "block",
+        "operator": "==",
+        "value": "nds/search-property"
+      }
+    ]
+  ],
+  "style": "seamless",
+  "acfe_autosync": ["json"],
+  "active": true
+}
