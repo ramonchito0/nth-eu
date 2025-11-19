@@ -22,7 +22,7 @@ function nds_filter_properties() {
         $args['meta_query'][] = [
             'key'     => 'vibe',
             'value'   => $vibe,
-            'compare' => '='
+            'compare' => 'LIKE'
         ];
     }
 
@@ -30,7 +30,7 @@ function nds_filter_properties() {
         $args['meta_query'][] = [
             'key'     => 'event_type',
             'value'   => $event,
-            'compare' => '='
+            'compare' => 'LIKE'
         ];
     }
 
@@ -38,7 +38,7 @@ function nds_filter_properties() {
         $args['meta_query'][] = [
             'key'     => 'style',
             'value'   => $style,
-            'compare' => '='
+            'compare' => 'LIKE'
         ];
     }
 
@@ -97,7 +97,7 @@ function nds_filter_properties() {
             ?>
 
         <article class="<?php echo $promo ? 'bg-accent' : 'bg-white'; ?> rounded p-6 flex gap-4">
-
+            <?php echo $guests?>
             <!-- Thumbnail -->
             <div class="w-[100px] h-[100px] rounded-full overflow-hidden flex-shrink-0">
                 <?= get_the_post_thumbnail( $post_id, 'thumbnail', ['class' => 'w-full h-full object-cover'] ); ?>

@@ -4,6 +4,33 @@
   "fields": [
 
     {
+      "key": "field_search_form_only",
+      "label": "Search Form Only",
+      "name": "search_form_only",
+      "type": "true_false",
+      "ui": 1,
+      "default_value": 0,
+      "message": "Enable this if you want to show only the search form"
+    },
+
+    {
+      "key": "field_category",
+      "label": "Property Category",
+      "name": "property_category",
+      "type": "select",
+      "ui": 1,
+      "allow_null": 1,
+      "return_format": "value",
+      "default_value": "",
+      "choices": {
+        "" : "Default",
+        "events": "Events",
+        "private_stays": "Private Stays"
+      },
+      "instructions": "Filters the results based on the property type. Leave as Default to include everything."
+    },
+
+    {
       "key": "field_vibe",
       "label": "Vibe",
       "name": "vibe",
@@ -67,20 +94,20 @@
       "multiple": 1,
       "ui": 1,
       "choices": {
-        "Heritage": "Heritage",
-        "Contemporary": "Contemporary",
-        "Eco Luxury": "Eco Luxury",
-        "Boutique Villas": "Boutique Villas",
-        "Converted Spaces": "Converted Spaces",
-        "I'm open to suggestions": "I'm open to suggestions"
+        "heritage": "Heritage",
+        "contemporary": "Contemporary",
+        "eco_luxury": "Eco Luxury",
+        "boutique_villas": "Boutique Villas",
+        "converted_spaces": "Converted Spaces",
+        "open_suggestions": "I’m open to suggestions"
       },
       "default_value": [
-        "Heritage",
-        "Contemporary",
-        "Eco Luxury",
-        "Boutique Villas",
-        "Converted Spaces",
-        "I'm open to suggestions"
+        "heritage",
+        "contemporary",
+        "eco_luxury",
+        "boutique_villas",
+        "converted_spaces",
+        "open_suggestions"
       ]
     },
 
@@ -142,16 +169,6 @@
         "wa",
         "nz"
       ]
-    },
-
-    {
-      "key": "field_search_form_only",
-      "label": "Search Form Only",
-      "name": "search_form_only",
-      "type": "true_false",
-      "ui": 1,
-      "default_value": 0,
-      "message": "Enable this if you want to show only the search form"
     }
 
   ],

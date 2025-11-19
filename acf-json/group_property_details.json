@@ -131,7 +131,7 @@
             "label": "Destination",
             "name": "destination",
             "type": "select",
-            "multiple": 1,
+            "multiple": 0,
             "ui": 1,
             "choices": {
                 "nsw": "NSW",

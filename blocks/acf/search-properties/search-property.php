@@ -12,15 +12,22 @@ $style_choices   = acf_choices('style');
 $guest_choices   = acf_choices('guests');
 $dest_choices    = acf_choices('destination');
 
+$vibeField = get_field('vibe');
+$eventField = get_field('event_type');
+$styleField = get_field('style');
+$guestField = get_field('guests');
+$destinationField = get_field('destination');
+
 $search_form_only = get_field('search_form_only'); 
+$filterByCategory = get_field('property_category');
 ?>
 
 <?php if ($search_form_only): ?>
     <div class="nds-search-form-only">
-            <form action="<?php echo site_url('/property-for-events-listing/'); ?>" method="get" class="flex gap-4 items-center">
+            <form action="<?php echo site_url('/property-for-events-listing/'); ?>" method="get" class="flex flex-col lg:flex-row gap-4 items-center">
 
                 <!-- Vibe -->
-                <?php if (!empty($vibe_choices)): ?> 
+                <?php if (!empty($vibeField)): ?> 
                     <select name="vibe">
                         <option value="">Select Vibe</option>
 
@@ -40,7 +47,7 @@ $search_form_only = get_field('search_form_only');
 
 
                 <!-- Event Type -->
-                <?php if (!empty($event_choices)): ?>
+                <?php if (!empty($eventField)): ?>
                     <select name="event_type">
                         <option value="">Select Event Type</option>
 
@@ -60,7 +67,7 @@ $search_form_only = get_field('search_form_only');
 
 
                 <!-- Style -->
-                <?php if (!empty($style_choices)): ?>
+                <?php if (!empty($styleField)): ?>
                     <select name="style">
                         <option value="">Select Style</option>
 
@@ -80,7 +87,7 @@ $search_form_only = get_field('search_form_only');
 
 
                 <!-- Guests -->
-                <?php if (!empty($guest_choices)): ?>
+                <?php if (!empty($guestField)): ?>
                     <select name="guests">
                         <option value="">Select Guests</option>
 
@@ -100,7 +107,7 @@ $search_form_only = get_field('search_form_only');
 
 
                 <!-- Destination -->
-                <?php if (!empty($dest_choices)): ?>
+                <?php if (!empty($destinationField)): ?>
                     <select name="destination">
                         <option value="">Select Destination</option>
 
@@ -127,10 +134,10 @@ $search_form_only = get_field('search_form_only');
 <?php return; endif; ?>
 
 
-<form method="get" class="nds-search-property flex gap-4 items-center">
+<form method="get" class="nds-search-property flex flex-col lg:flex-row gap-4 items-center">
 
                 <!-- Vibe -->
-                <?php if (!empty($vibe_choices)): ?> 
+                <?php if (!empty($vibeField)): ?> 
                     <select name="vibe">
                         <option value="">Select Vibe</option>
 
@@ -150,7 +157,7 @@ $search_form_only = get_field('search_form_only');
 
 
                 <!-- Event Type -->
-                <?php if (!empty($event_choices)): ?>
+                <?php if (!empty($eventField)): ?>
                     <select name="event_type">
                         <option value="">Select Event Type</option>
 
@@ -170,7 +177,7 @@ $search_form_only = get_field('search_form_only');
 
 
                 <!-- Style -->
-                <?php if (!empty($style_choices)): ?>
+                <?php if (!empty($styleField)): ?>
                     <select name="style">
                         <option value="">Select Style</option>
 
@@ -179,8 +186,8 @@ $search_form_only = get_field('search_form_only');
                             foreach ($style_choices as $value => $label): 
                         ?>
                             <option 
-                                value="<?= esc_attr($value); ?>"
-                                <?= selected($selected_style, $value); ?>
+                                value="<?= esc_attr(strtolower($value)); ?>"
+                                <?= selected($selected_style, strtolower($value)); ?>
                             >
                                 <?= esc_html($label); ?>
                             </option>
@@ -190,7 +197,7 @@ $search_form_only = get_field('search_form_only');
 
 
                 <!-- Guests -->
-                <?php if (!empty($guest_choices)): ?>
+                <?php if (!empty($guestField)): ?>
                     <select name="guests">
                         <option value="">Select Guests</option>
 
@@ -210,7 +217,7 @@ $search_form_only = get_field('search_form_only');
 
 
                 <!-- Destination -->
-                <?php if (!empty($dest_choices)): ?>
+                <?php if (!empty($destinationField)): ?>
                     <select name="destination">
                         <option value="">Select Destination</option>
 
@@ -288,6 +295,14 @@ if ($filter_destination) {
     ];
 }
 
+if( $filterByCategory ) {
+    $args['tax_query'][] = [
+        'taxonomy' => 'property-category',
+        'field'    => 'slug',
+        'terms'    => $filterByCategory,
+    ];
+}
+
 
 $query = new WP_Query($args);
 
@@ -300,7 +315,7 @@ $map_markers = [];
             class="hidden fixed inset-0 bg-white/70 backdrop-blur-sm z-50 flex items-center justify-center">
             <div class="animate-spin w-10 h-10 border-4 border-[#B9886A] border-t-transparent rounded-full"></div>
         </div>        
-        <div class="results-list h-[600px] overflow-y-auto pr-3 flex flex-col gap-4">
+        <div class="results-list lg:h-[600px] overflow-y-auto pr-3 flex flex-col gap-4">
 
 <?php if ( $query->have_posts() ) : ?>
 
