@@ -55,7 +55,7 @@ $fields = [
 
 <?php if ($search_form_only): ?>
 <div class="nds-search-form-only">
-    <form action="<?= site_url('/property-for-events-listing/'); ?>" method="get" class="flex flex-col lg:flex-row gap-4 items-center">
+    <form action="<?= site_url('/properties-for-events/#property-search'); ?>" method="get" class="flex flex-col lg:flex-row gap-4 items-center">
 
         <?php 
         foreach ($fields as $name => $field) {

@@ -271,10 +271,17 @@ function nds_dropdown($fieldEnabled, $name, $label, $choices) {
                 class="absolute bg-white border border-[#909191] rounded-lg shadow-xl z-[9999]"
                 :style="`top:${coords.top}px; left:${coords.left}px; width:${coords.width}px`"
             >
+                <div 
+                    @click="select('', '')"
+                    class="rounded-tl-lg rounded-tr-lg px-4 py-2 cursor-pointer hover:bg-[#F4F4F4]"
+                    :class="value === '' ? 'bg-[#F4F4F4]' : ''"
+                >
+                    <?= esc_html($label) ?>
+                </div>            
                 <template x-for="(label, val) in items" :key="val">
                     <div 
                         @click="select(val, label)"
-                        class="rounded-lg px-4 py-2 cursor-pointer hover:bg-[#F4F4F4]"
+                        class="px-4 py-2 cursor-pointer hover:bg-[#F4F4F4]"
                         :class="value === val ? 'bg-[#F4F4F4]' : ''"
                         x-text="label"
                     ></div>
